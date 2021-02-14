@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <form>
+      Select image to upload:
+      <input type="text" name="Name" id="fileToUpload" />
+      <input type="file" name="files" id="fileToUpload" />
+      <input type="submit" value="Upload Image" name="submit" />
+    </form>
+    <script type="text/javascript">
+      const formElement = document.querySelector("form");
+      formElement.addEventListener("submit", async (e) => {
+        const reqBody = new FormData();
+        reqBody.append("data", JSON.stringify({ Name: e.target.Name.value }));
+        reqBody.append("files.file", e.target.files.files[0]);
+        console.log([...reqBody.entries()], e.target.files.files[0], formElement);
+        e.preventDefault();
+        const response = await fetch("http://localhost:1337/private-files", {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEzMjUyNzk1LCJleHAiOjE2MTU4NDQ3OTV9.N8mcqoQdUneLOn-VROjal9zcy2N4o8kjg9QMzei_YIc",
+          },
+          body: reqBody,
+        });
+        const status = await response.json();
+        console.log(status);
+      });
+    </script>
+  </body>
+</html>

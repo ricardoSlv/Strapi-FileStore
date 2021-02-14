@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_cookies_similar_tos",
+  "info": {
+    "name": "Similar to",
+    "icon": "american-sign-language-interpreting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cookies": {
+      "collection": "cookies"
+    }
+  }
+}

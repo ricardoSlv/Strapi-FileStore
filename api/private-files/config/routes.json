@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/private-files",
+      "handler": "private-files.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/private-files/count",
+      "handler": "private-files.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/private-files/:id",
+      "handler": "private-files.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/private-files/:id/download",
+      "handler": "private-files.download",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/private-files",
+      "handler": "private-files.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/private-files/:id",
+      "handler": "private-files.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/private-files/:id",
+      "handler": "private-files.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

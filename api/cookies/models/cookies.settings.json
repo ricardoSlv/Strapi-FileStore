@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cookies",
+  "info": {
+    "name": "Cookies",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "regex": "^([A-Z][a-z]+)( [A-Z|a-z][a-z]*)*$",
+      "unique": true
+    },
+    "Stock": {
+      "type": "integer"
+    },
+    "Ingredients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cookies.ingredients"
+    },
+    "paide": {
+      "collection": "cookies",
+      "via": "filhode",
+      "dominant": true
+    },
+    "filhode": {
+      "collection": "cookies",
+      "via": "paide"
+    }
+  }
+}

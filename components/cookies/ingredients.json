@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_cookies_ingredients",
+  "info": {
+    "name": "Ingredients",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Unit": {
+      "type": "enumeration",
+      "enum": [
+        "kg",
+        "g",
+        "l",
+        "ml"
+      ]
+    },
+    "Quantity": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "private_files",
+  "info": {
+    "name": "PrivateFiles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": true
+    },
+    "Url": {
+      "type": "string",
+      "unique": false
+    },
+    "Type": {
+      "type": "string"
+    }
+  }
+}

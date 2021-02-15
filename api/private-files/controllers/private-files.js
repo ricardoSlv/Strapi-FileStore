@@ -16,8 +16,8 @@ module.exports = {
       data.Type = files.file.type;
 
       entity = await strapi.services['private-files'].create(data);
-      console.log('Entity ', Object.keys(entity).join(' '))
-      console.log('Type ', files.file.type)
+      // console.log('Entity ', Object.keys(entity).join(' '))
+      // console.log('Type ', files.file.type)
 
       await fsP.mkdir(`./files/${entity.id}`)
       await fsP.rename(files.file.path, `./files/${entity.id}/${files.file.name}`)
@@ -29,14 +29,15 @@ module.exports = {
   },
 
   async download(ctx) {
-    console.log('Ctx ', Object.keys(ctx).join(' '))
-    console.log('Params ', Object.keys(ctx.params).join(' '))
-    console.log('Res ', Object.keys(ctx.res).join(' '))
-    console.log('State', Object.keys(ctx.state).join(' '))
+    // console.log('Ctx ', Object.keys(ctx).join(' '))
+    // console.log('Params ', Object.keys(ctx.params).join(' '))
+    // console.log('Res ', Object.keys(ctx.res).join(' '))
+    // console.log('State', Object.keys(ctx.state).join(' '))
 
     const entity = await strapi.services['private-files'].findOne({id: ctx.params.id})
     const path = `./files/${entity.id}/${entity.Url}`
-    console.log(entity)
+    // console.log(entity)
+
     //const file = await fsP.readFile('./files/14/avatar.png')
     //var stat = await fsP.stat('./files/14/avatar.png');
     //ctx.type='image/png';

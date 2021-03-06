@@ -7,7 +7,7 @@ module.exports = strapi => {
         //console.log(ctx.request.header)
         //console.log(ctx.cookie.JWT);
         // console.log(ctx.state)
-        ctx.request.header.authorization=`Bearer ${ctx.cookie.JWT}`
+        ctx.request.header.authorization=`Bearer ${ctx.cookie?.JWT}`
         //console.log("ola",ctx.request.header.authorization)
         //console.log(ctx.request)
 

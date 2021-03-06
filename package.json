@@ -26,7 +26,8 @@
     "strapi-plugin-graphql": "3.4.6",
     "strapi-plugin-upload": "3.4.6",
     "strapi-plugin-users-permissions": "3.4.6",
-    "strapi-utils": "3.4.6"
+    "strapi-utils": "3.4.6",
+    "strapi-connector-mongoose": "3.4.6"
   },
   "author": {
     "name": "A Strapi developer"
